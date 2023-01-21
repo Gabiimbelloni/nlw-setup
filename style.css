@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #09090A;
+    color: white;
+  
+  
+    height: 100vh;
+  }
+
+  header {
+      display: flex; /*isso serve para deixar o elemento flexivel, ou seja o elemento fica ao lado do outro e não para baixo*/
+      align-items: center; /*Só funciona junto com o display flex*/
+      justify-content: space-between; /*Significa que ele vai pegar toda a largura do header e vai colocar espaço entre os elementos. Fazendo com que cada um fique em uma ponta do header*/
+      padding: 48px; /*Quando colocamos so padding vale para todos os lados*/ 
+
+      position: fixed;
+      width: 100%;
+  }
+
+  button {
+      padding: 16px 24px; /*O 16 é equivalente a distancia do escrito até a parte de cima da caixa e o 24 é equivalente a parte do lado. | _*/
+      border-radius: 8px;
+      border: 1px solid #8B5CF6;
+      background-color: transparent;
+      color: white; 
+      
+      display: flex;
+      align-items: center;/*Só funciona junto com o display flex*/
+      gap: 12px; /*gap é o espaço entre os elementos que existem e podemos usar pq estamos usando o display flex*/
+      
+      font-family: 'Inter'; /*isso significa qual é a familia da fonte*/
+      font-weight: 600;/*isso quer dizer se escolhemos a letra mais fina ou mais grossa...*/
+      font-size: 16px;/*tamanho da fonte*/
+      line-height: 125%;/*altura da linha*/
+  }
+
+  #form-habits {
+    display: flex;
+    padding: 182px 48px 48px;
+    width: fit-content;
+  }
+
+  .habits{
+      margin-top: 59px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+  }
+
+  .habit {
+      width: 64px;
+      height: 64px;
+      font-size: 32px; /*tamanho do icone*/
+      display: flex;
+      align-items: center;
+      justify-content: center; /*para alinhar no meio da div*/
+  }
+
+  .days { 
+      display: flex;
+      gap: 45px;
+      margin-left: 32px;
+  }
+
+  .day {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+  }
+
+  .day div {
+    margin-bottom: 8px;
+    font-family: 'Roboto Mono';
+    font-size: 20px;
+    line-height: 125%;
+    color: #A1A1AA;
+    text-align: center;
+  }
+
+  input {
+     appearance: none; /*aqui nós estamos tirando a aparencia do checkbox. Quando fazemos isso podemos alterar as propriedades dele. Sem isso não conseguimos usar o border-radius por exemplo*/
+     -webkit-appearance: none;/*Esse webkit serve para que todos os navegadores entandam o appearence, que nem todos entendem ser o webkit na frente.*/
+
+      height: 64px;
+      width: 64px;
+
+      border: 2px solid #27272A;
+      border-radius: 8px;
+
+      background: #18181B;
+  }
+
+  input:checked{
+      background: #8B5CF6;
+      border: 2px solid #A78BFA;
+    
+  }
+
+  @media (max-width: 570px){
+      button div{
+          display: none;
+      }
+  }
